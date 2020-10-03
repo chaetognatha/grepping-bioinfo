@@ -5,7 +5,6 @@ a=$(grep -v \> paxillus.fna | grep -o "[GC]" | wc -m)
 b=$(grep -v \> paxillus.fna | grep -o "[GCAT]" | wc -m)
 #calculate GC%
 echo "GC%:"
-#echo with newline, may not work everywhere
 x=$(echo "$a"/"$b" | bc -l)
 echo "$x"
 #count exact occurrences of GAAGTC
